@@ -149,7 +149,7 @@ function implicit_pt_HM_II(;nt,nvx, tol=1e-6, niter=1e5)
     p1 = plot!(xv, ϕ, label="ϕ")
     display(plot(p1))
     sleep(0.05)
-      
+    
   end
  
 end
