@@ -6,8 +6,8 @@ using Printf
 
 # This code solves the PDEs of Model I from Schmalholz et al., 2024:
 # Equations for porosity and Pf (fluid pressure) diffusion
-# without (de)hydration reactions,
-# and including poroelastic effects.
+# Without (de)hydration reactions
+# Including poroelastic effects
 
 # PDEs:
 # ∂Pf/∂t = ∂/∂x (k / (B * ϕ * ηf) * ∂Pf/∂x)   [1] Eq. 5 in Schmalholz et al., 2024
@@ -47,7 +47,6 @@ function main(;nt, nvx)
     ϕ_amb       = 0.1           # Ambiant porosity 
     dϕ_phys     = 0.1           # Magnitude of ϕ perturbation   | [m]
     ϕ_max       = 0.5           # Maximum of porosity anomaly
-    
 
     # Characteristic parameters
     Lc          = L_phys                # LenghScale      | [m]
