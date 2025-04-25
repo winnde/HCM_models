@@ -1,4 +1,4 @@
-This project aims to reproduce the codes from the paper by Schmalholz et al., 2024, using the Julia language.
+This project aims to reproduce the codes from the paper by Schmalholz et al. (2024), using the Julia language.
 Below, I briefly describe the different programs. For more details, you can refer to the comments within the code or the dedicated documentation section.
 
 1 – HM_model_I.jl
