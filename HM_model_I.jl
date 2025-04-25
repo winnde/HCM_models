@@ -147,6 +147,7 @@ function main(;nt, nvx)
         Pf0     .= Pf 
         ϕ0      .= ϕ
 
+        # solve equations
         if explicit == 1
             explicit_method(;Pf, ϕ, Pf0, ϕ0, qϕ, qPf, κ, Δx, Δt)
         end 
