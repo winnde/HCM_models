@@ -1,23 +1,25 @@
 using Plots, SpecialFunctions, LinearAlgebra
 using Printf
 
-# Explanation:
-# -------------
+#= 
+Explanation:
+------------
 
-# This code solves the PDEs of Model I from Schmalholz et al., 2024:
-# Equations for porosity and Pf (fluid pressure) diffusion
-# Without (de)hydration reactions
-# Including poroelastic effects
+This code solves the PDEs of Model I from Schmalholz et al., 2024:
+Equations for porosity (ϕ) and fluid pressure (Pf) diffusion
+Without (de)hydratation reactions
+Including poroelastic effects
 
-# PDEs:
-# ∂Pf/∂t = ∂/∂x (k / (B * ϕ * ηf) * ∂Pf/∂x)   [1] Eq. 5 in Schmalholz et al., 2024
-# ∂ϕ/∂t  = ∂/∂x (k / (B * ϕ * ηf) * ∂ϕ/∂x)    [2] Eq. 6 in Schmalholz et al., 2024
+PDEs:
+∂Pf/∂t = ∂/∂x (k / (B * ϕ * ηf) * ∂Pf/∂x)   [1] Eq. 5 in Schmalholz et al., 2024
+∂ϕ/∂t  = ∂/∂x (k / (B * ϕ * ηf) * ∂ϕ/∂x)    [2] Eq. 6 in Schmalholz et al., 2024
 
-# Four numerical methods are proposed to solve these equations:
-# explicit_HM_I()               = explicit method
-# pt_method_no_damp()           = implicit pseudo-transient method without damping
-# pt_method()                   = implicit pseudo-transient method with damping
-# classical_implicit_method()   = implicit method (matrix inversion)
+Four numerical methods are proposed to solve these equations:
+explicit_HM_I()               = explicit method
+pt_method_no_damp()           = implicit pseudo-transient method without damping
+pt_method()                   = implicit pseudo-transient method with damping
+classical_implicit_method()   = implicit method (matrix inversion)
+=#
 
 function main(;nt, nvx)
 
