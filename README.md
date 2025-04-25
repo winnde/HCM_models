@@ -5,7 +5,7 @@ Below, I briefly describe the different programs. For more details, you can refe
 
 This program solves the diffusion equations for fluid pressure ($Pf$) and porosity ($\phi$).
 The equations have the same structure for both variables and include poroelastic effects (Yarushina & Podladchikov, 2015).
-(De)hydration reactions are not considered in this model.
+(De)hydratation reactions are not considered in this model.
 This simplified case is used to test and compare various numerical methods that I am familiar with, including:
 - Explicit method
 - Implicit method
