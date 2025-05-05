@@ -9,4 +9,11 @@ The equations have the same structure for both variables and include poroelastic
 This simplified case is used to test and compare various numerical methods that I am familiar with, including:
 - Explicit method
 - Implicit method
-- Pseudo-transient method
+- Pseudo-transient method with not damping
+- Pseudo-transient method with damping
+
+2 - HM_model_II.jl
+
+This program solves the diffusion equaions for porosity ($\phi$). 
+The equation inculde also poroelastic effect (Yarushina & Podladchikov, 2015). 
+
